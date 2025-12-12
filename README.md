@@ -44,3 +44,14 @@ serve .
 python -m http.server 3000
 # then open http://localhost:3000
 
+
+## 📦 Project Structure
+```bash
+JS-Project/
+├── css/            # stylesheets
+├── js/             # JavaScript files
+├── images/         # images and icons
+├── webfonts/       # fonts
+└── index.html      # main entry
+
+```
