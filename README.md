@@ -55,6 +55,7 @@ JS-Project/
 └── index.html      # main entry
 
 ```
+---
 ## 💡 Usage Guide
 
 - Edit HTML in **index.html**.
