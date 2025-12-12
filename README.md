@@ -44,7 +44,7 @@ serve .
 python -m http.server 3000
 # then open http://localhost:3000
 ```
-
+---
 ## 📦 Project Structure
 ```bash
 JS-Project/
