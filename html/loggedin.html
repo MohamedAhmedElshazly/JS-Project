@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Project</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/all.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="header">
+      <a class="navbar-brand" href="#">
+        <img
+          src="../images/c261d38b-6146-40be-8283-e79258b23245.jfif"
+          alt="Logo"
+          class="logo"
+          width="120px"
+          height="70px"
+        />
+      </a>
+
+      <div class="right">
+        <span id="usernameDisplay" class="username"></span>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="cartDropdown">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount">0</span>
+          </a>
+          <div id="cartDropdownMenu" class="cart-dropdown">
+            <div id="cartDropdownItems"></div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="cart.html">View All Products</a>
+          </div>
+        </li>
+        <a href="../html/index.html">
+          <button onclick="logout()" class="logout-btn">Logout</button>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Search Section -->
+    <section>
+      <div class="search">
+        <select id="searchType">
+          <option value="name">Search by Product Name</option>
+          <option value="category">Search by Category</option>
+        </select>
+        <input
+          type="text"
+          id="searchBox"
+          class="inpt-search"
+          placeholder="Search..."
+          onkeyup="searchProducts()"
+        />
+        <button id="search-btn" onclick="searchProducts()">Search</button>
+      </div>
+    </section>
+
+    <!-- Products Cards -->
+    <main>
+      <div id="products-container">
+        <div id="products-row" class="parent-Product"></div>
+      </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

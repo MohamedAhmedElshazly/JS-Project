@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="header">
+      <a class="navbar-brand" href="#">
+        <img
+          src="../images/c261d38b-6146-40be-8283-e79258b23245.jfif"
+          alt="Logo"
+          class="logo"
+          width="120px"
+          height="70px"
+        />
+      </a>
+      <div class="right">
+        <span id="usernameDisplay"></span>
+
+        <div id="cartDropdown">
+          <i class="fas fa-shopping-cart"></i> <span id="cartCount">0</span>
+          <div id="cartDropdownMenu" class="cart-dropdown">
+            <div id="cartDropdownItems"></div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="cart.html">View All Products</a>
+          </div>
+        </div>
+        <a href="../html/index.html">
+          <button onclick="logout()" class="logout-btn">Logout</button>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Cart Items -->
+    <div class="cart-container">
+      <h3>Cart Items</h3>
+      <div id="cart-items" class="cart-items-container"></div>
+    </div>
+
+    <!-- Total Price -->
+    <div class="total-price-container">
+      <h3>Total Price: $<span id="totalPrice">0</span></h3>
+    </div>
+    <hr />
+
+    <!-- Favorite Items -->
+    <div class="favorite-container">
+      <h3>Favorite Items</h3>
+      <div id="favorite-items" class="favorite-items-container"></div>
+    </div>
+
+    <script>
+      function toggleCartDropdown() {
+        document.getElementById("cartDropdownMenu").classList.toggle("active");
+      }
+
+      function logout() {
+        localStorage.removeItem("loggedIn");
+        localStorage.removeItem("loggedInUser");
+        window.location.href = "../html/index.html";
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const cartIcon = document.querySelector(".fa-shopping-cart");
+        if (cartIcon) {
+          cartIcon.addEventListener("click", toggleCartDropdown);
+        }
+      });
+    </script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
